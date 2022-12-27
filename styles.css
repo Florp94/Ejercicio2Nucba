@@ -89,13 +89,13 @@ main {
 
 .hero-info p {
     font-size: 18px;
-    width: 100%;
-    color:#E59500;
-
+    width: 90%;
+    color: #E5DADA;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
 }
 
 .hero-info p > span {
-    font-weight: 800;
+    font-weight: 600px;
 }
 
 .flex-container {
@@ -110,7 +110,6 @@ main {
     background-color: #02040F;
     width: 120px;
     padding: 8px 10px;
-    border-radius: 10px;
     font-size: 16px;
     text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -130,9 +129,7 @@ main {
 
 .hero-foto {
     width: 800px;
-    background: #02040F;
     padding: 5px;
-    border-radius: 1px;
     display: flex;
     flex-direction: column;
     justify-content:center;
