@@ -22,8 +22,10 @@ header {
     padding: 0px 30px;
     position: fixed;
     top: 0;
-    z-index: 2;
     box-shadow: #02040F 0px 8px 24px ;
+    position: fixed;
+    background-color:#E59500;
+    z-index: 1;
 }
 /* Navbar */
 .navbar, .navbar-list {
@@ -51,6 +53,21 @@ justify-content: center;
     color: #840032;
     font-weight: 700;
 }
+
+/* MEDIA QUERIES */
+.navbar {
+    display:flex;
+}
+
+.navbar i {
+    font-size: 36px;
+    display: none;
+}   
+
+#toggle-menu {
+    display: none;
+}
+
 /* Fin Navbar */
 
 /* MAIN FONDO */
@@ -70,7 +87,7 @@ main {
 }
 /* HERO */
 #hero {
-    margin-top: 65px;
+    margin-top: 80px;
     padding: 70px 0;
     max-width: 1200px;
     display: flex;
@@ -160,7 +177,7 @@ main {
 
 }
 
-/* Footer */
+/* Footer en construcción*/
 footer {
     background:#E59500;
 }
@@ -173,38 +190,83 @@ footer {
     padding-top: 10px;
     font-family: Georgia, 'Times New Roman', Times, serif;
     width: 100%;
+    font-size: 20px;
 
 }
 
-.contacto {
-    display: flex;
-    justify-content:space-between;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding-bottom: 30px;
-    border:#02040F 1px;
-    border-style:groove;
-    margin-top: 20px;
-    width: 500px;
-    height: 200px;
-    padding-left: 20px;
-    padding-right: 20px;
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 992px) {
+    .hero-info {
+        text-align: center;
+        width: 90%;
+        align-items: center;
+    }
+
+    .hero-info h1 {
+        display: block;
+        width: 100%;
+
+    }
+    .hero-info p {
+        max-width: 80%;
+        font-size: 16px;
+    }
+    .button-container {
+        justify-content: center;
+    }
+    .hero-foto {
+        display: none;
+    }
+
+    .tituto-h2{
+        font-size: 30px;
+        width: 100%;
+        display: block;
+    }
+    .informacion-de-tienda {
+        font-size: 15px;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+        
+    }
+
+    .footer-estilo {
+        font-size: 14px;
+        align-items: center;
+        text-align: center;
+        width: 90%;
+    }
 }
 
-.imagen-contacto {
-    width: 50px;
-    justify-content: center;
-    text-align: center;
-    display: -webkit-flex;
-    display: flex;
-    padding-bottom: 5px;
-    flex-wrap: wrap;
-    width: 50px;
-    padding: 50px;
-}
-.caja.info.contacto {
-    padding-top: 50px;
-    display: flex;
-    display: -webkit-flex;
-    justify-content: space-between;
-    
+@media (max-width: 576px) {
+    .navbar ul {
+        background-color: #E59500;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 80px;
+        left:0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.4s ease-out;
+    }
+    .navbar i {
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .navbar-list {
+        transform: translateX(0);
+        transition: all 0.4s ease-in;
+
+    }
+
+    hero-info p {
+        max-width: 100%;
+    }
 }
