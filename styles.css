@@ -146,6 +146,8 @@ main {
     justify-content:center;
 }
 
+/* Información de tienda */
+
 .titulo-h2, .informacion-de-tienda {
     justify-content: center;
     display: flex;
@@ -174,8 +176,10 @@ main {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     padding: 0%;
     width:600px;
+    color: #E5DADA;
 
 }
+
 
 /* Footer en construcción*/
 /* footer {
@@ -194,6 +198,8 @@ main {
 
 } */
 
+/* Beneficios de la tienda */
+
 #info {
     padding: 70px 0;
     max-width: 1200px;
@@ -208,6 +214,7 @@ main {
 #info h3 {
     font-size: 32px;
     font-weight: 800;
+    color: #E5DADA;
 
 }
 
@@ -239,13 +246,137 @@ main {
 
 .info-cards h4 {
     font-size: 20px;
+    color: #E5DADA;
 }
 
 .info-cards p {
     font-size: 15px;
+    color: #E5DADA;
+}
+
+#form {
+    width: 650px;
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-right: 200px;
+}
+
+.form h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 20px;
+    color: #E5DADA;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.form {
+    background:#a12957;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(red, green, blue, 0.8);
+    border-radius: 10px;
+    width: 100%;
+    margin: auto;
+    padding: 100px 50px 100px 50px;
+}
+
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+    padding: 15px;
+}
+
+input {
+    background-color:#a12957;
+    color:#840032;
+    font-size: 25px;
+    border:none;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid #E5DADA;
+}
+
+input:focus {
+    outline: none;
+    color: #E5DADA;
+}
+ 
+label {
+    color: #02040F;
+    font-size: 20px;
+    position: absolute;
+    transition: 0,5s ease-in-out all;
+    pointer-events: none;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+    padding-top: 15px;
+}
+
+input:focus~label {
+    top: -14px;
+    color: #E59500;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before{
+    content: "" ;
+    height: 2px;
+    width: 0%;
+    bottom: 0;
+    position: absolute;
+    background: linear-gradient(to right, #E59500, #E5DADA);
+    transition: 0.3s ease width;
+    left: 0;
+    
+}
+
+input:focus~.barra::before {
+    width: 110%;
+    
+}
+
+button {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: linear-gradient(to right, #E59500, #E5DADA);
+    border: none;
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    color: #840032;
+    height: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+
+#form-mapa {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.mapouter {
+    padding-top: 15px;
 }
 
 /* MEDIA QUERIES */
+
 
 @media (max-width: 992px) {
     .hero-info {
@@ -305,12 +436,12 @@ main {
         transform: translateX(200%);
         transition: all 0.4s ease-out;
     }
-   
+    
     .navbar i {
         display: block;
     }
 
-    #toggle-menu:checked ~ .navbar-list {
+    #toggle-menu:checked~.navbar-list {
         transform: translateX(0);
         transition: all 0.4s ease-in;
 
@@ -325,5 +456,17 @@ main {
         display: block;
         font-size: 35px;
     }
-}
+    .form {
+        width: 70%;
+    }
 
+    #info {
+        width: 70%;
+    }
+
+    .info-cards {
+        display: block;
+        flex-direction: column;
+        margin: 10px;
+    }
+}
