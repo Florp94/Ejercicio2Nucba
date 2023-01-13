@@ -525,8 +525,8 @@ footer {
 .redes-footer i {
     margin: 20px;
     background: #E5DADA;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -564,7 +564,7 @@ footer {
     color: #840032;
     font-weight: 500px;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 @media (max-width: 576px) {
