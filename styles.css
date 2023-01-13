@@ -82,9 +82,7 @@ main {
     
 }
 
-.hero-foto {
 
-}
 /* HERO */
 #hero {
     margin-top: 80px;
@@ -379,6 +377,31 @@ button {
 
 
 @media (max-width: 992px) {
+
+    .navbar ul {
+        background-color: #E59500;
+        width: 100%;
+        height: calc(100vh - 80px);
+        position: absolute;
+        top: 50px;
+        left:0px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transform: translateX(200%);
+        transition: all 0.4s ease-out;
+    }
+
+    .navbar i {
+        display: block;
+    }
+
+    #toggle-menu:checked ~ .navbar-list {
+        transform: translateX(0);
+        transition: all 0.4s ease-in;
+
+    }
+
     .hero-info {
         text-align: center;
         width: 90%;
@@ -391,8 +414,8 @@ button {
 
     }
     .hero-info p {
-        max-width: 80%;
-        font-size: 16px;
+        max-width: 70%;
+        font-size: 17px;
     }
     .button-container {
         justify-content: center;
@@ -407,20 +430,60 @@ button {
         display: block;
     }
     .informacion-de-tienda {
-        font-size: 15px;
+        font-size: 17px;
         align-items: center;
         text-align: center;
-        width: 90%;
+        width: 50%;
         
     }
 
+   #info {
+        width: 50%;
+        text-align: center;
+   }
+
+    .info-cards {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+       width: 100px;
+       margin: 10px;
+    }
+
+    #form-mapa {
+        justify-content: center;
+        align-items: center;
+        width: 70%;
+        padding-left: 200px;
+
+    }
+
+    .mapouter {
+        overflow: hidden;
+        padding-bottom: 56,25%;
+        position: relative;
+        height: 0;
+    }
+
+    .mapouter iframe {
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        position: relative;
+    }
+}
     .footer-estilo {
         font-size: 14px;
         align-items: center;
         text-align: center;
         width: 90%;
     }
-}
+
+
+  
 
 @media (max-width: 576px) {
     .navbar ul {
